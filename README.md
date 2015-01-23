@@ -17,4 +17,4 @@ or add
 in your .rspec file
 
 # You can fork it and play with it
-MIT Licence
+MIT License
