@@ -1,9 +1,14 @@
 require 'rspec/core/formatters/base_formatter'
 
-class ZeldaFormatter < RSpec::Core::Formatters::BaseFormatter
+class ZeldaFormatter
+  RSpec::Core::Formatters.register self, :dump_summary
 
-  def close
-    fork{ exec 'afplay', '../zelda.mp3' } unless failure_count > 0
+  def initialize(output)
+    @output = output
   end
 
+  def dump_summary(notification)
+    test = File.expand_path(File.dirname(__FILE__))
+    fork{ exec 'afplay', File.expand_path(File.dirname(__FILE__)) + '/../sound/zelda.mp3' } unless notification.failed_examples.count > 0
+  end
 end
