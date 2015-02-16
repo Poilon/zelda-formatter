@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 Gem::Specification.new do |spec|
   spec.name          = "zelda-formatter"
   spec.version       = '0.0.1'
-  spec.authors       = ["Poilon"]
+  spec.authors       = ["Poilon", "mru2"]
   spec.email         = ["poilon@gmail.com"]
   spec.summary       = %q{A zelda sound will be played when your specs pass}
   spec.description   = %q{A zelda sound will be played when your specs pass}
