@@ -16,5 +16,7 @@ or add
 ```
 in your .rspec file
 
+trust me you need it
+
 # You can fork it and play with it
 MIT License
